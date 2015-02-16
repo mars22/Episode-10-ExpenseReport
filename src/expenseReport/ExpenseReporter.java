@@ -8,9 +8,9 @@ import java.util.Locale;
 public class ExpenseReporter {
 
     private ExpenseReport report;
-    private ExpenseReportName expanseNamer;
+    private ExpenseNamer expanseNamer;
     private ReportPrinter printer;
-    public ExpenseReporter(ExpenseReport report, ExpenseReportName expanseNamer) {
+    public ExpenseReporter(ExpenseReport report, ExpenseNamer expanseNamer) {
 
         Locale.setDefault(new Locale("en", "US"));
 
@@ -25,10 +25,10 @@ public class ExpenseReporter {
 
         report.totalUpExpencies();
 
-        printExpensesAndTotals(printer);
+        printExpensesAndTotals();
     }
 
-    private void printExpensesAndTotals(ReportPrinter printer) {
+    private void printExpensesAndTotals() {
         printHeader();
         for (Expense expense : report.GetExpenses())
             printExpanse(expense);

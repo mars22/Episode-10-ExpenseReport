@@ -14,7 +14,7 @@ public class ExpenseReportTest {
   @Before
   public void setUp() {
     report = new ExpenseReport();
-      reporter = new ExpenseReporter(report, new ExpenseReportName());
+      reporter = new ExpenseReporter(report, new ExpenseReportNamer());
     printer = new MockReportPrinter();
   }
 
