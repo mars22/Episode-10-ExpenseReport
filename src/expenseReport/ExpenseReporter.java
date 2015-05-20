@@ -10,6 +10,7 @@ public class ExpenseReporter {
     private ExpenseReport report;
     private ExpenseNamer expanseNamer;
     private ReportPrinter printer;
+
     public ExpenseReporter(ExpenseReport report, ExpenseNamer expanseNamer) {
 
         Locale.setDefault(new Locale("en", "US"));
